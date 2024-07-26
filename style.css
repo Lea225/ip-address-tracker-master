@@ -1,0 +1,112 @@
+:root {
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%);
+}  
+
+* {
+    font-family: 'Rubik', sans-serif;
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-size: 100% cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-image: url('images/pattern-bg-desktop.png');
+}
+
+header {
+    height: 40vh;
+    font-size: 18px;
+    text-align: center;
+}
+h1{
+    color: hsl(0, 0%, 100%);
+}
+h2{
+    font-size: 0.8em;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+
+}
+.result-div p{
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--very-dark-gray);
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container input[type="text"],
+.search-container button {
+    height: 45px; 
+    padding: 0 10px; 
+}
+
+.search-container input[type="text"] {
+    width: 30%;
+    outline: none;
+    border: 1px solid var(--dark-gray); 
+    border-right: none; 
+    border-radius: 10px 0 0 10px;
+}
+
+.search-container button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 0 10px 10px 0; 
+    background-color: var(--very-dark-gray); 
+    cursor: pointer; 
+    width: 50px; 
+}
+
+.result-div {
+    z-index: 2;
+    display: flex;
+    width: 900px;
+    position: absolute;
+    border-radius: 10px;
+    text-align: left;
+    padding: 2rem 0;
+    align-items: center;
+    justify-content: center;
+    top: 43%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre */
+}
+hr{
+    height: 9vh;
+    opacity: 0.3;
+    margin: 0 2rem;
+    align-self: center;
+    border: 1px solid var(--dark-gray);
+}
+.map {
+    z-index: 1;
+    position: relative;
+}
+@media screen and (max-width: 900px){
+    .search-container input[type="text"] {
+        width: 62%;
+    }
+    .result-div{
+        top: 55%;
+        width: 75%;
+        height: 50vh;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    hr{
+        display: none;
+    }
+}
